@@ -1,0 +1,7 @@
+import random
+list=[]
+while(len(list)!=5):
+    randnum=random.randint(0,100)
+    if randnum not in list:
+        list.append(randnum)
+print(list)
