@@ -1,0 +1,39 @@
+a=str(input("Enter any boy name"))
+b=str(input("Enter any girl name"))
+a1=list(a)
+b1=list(b)
+for i in range (len(a1)):
+    for j in range(len(b1)):
+        if a1[i]==b1[j]:
+            a1[i]='0'
+            b1[j]='0'
+print(a1)
+print(b1)
+
+count=0
+for i in range(len(a1)):
+    if a1[i]!='0':
+        count+=1
+
+for i in range(len(b1)):
+    if b1[i]!='0':
+        count+=1
+print(count)
+f=0
+res=list("FLAMES")
+while(len(res)!=1):
+    f=(count+f-1)%len(res)
+    res.pop(f)
+print("Relationship is ",res[0])
+if res[0]=='F':
+    print("F")
+elif res[0]=='L':
+    print("L")
+elif res[0]=='A':
+    print("A")
+elif res[0]=='M':
+    print("M")
+elif res[0]=='E':
+    print("E")
+elif res[0]=='S':
+    print("S")
